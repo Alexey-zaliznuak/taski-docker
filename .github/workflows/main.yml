@@ -8,18 +8,22 @@ on:
 
 jobs:
   tests:
+
     # Set environment
     runs-on: ubuntu-latest
 
     steps:
+
     # Copy project
     - name: Check out code
       uses: actions/checkout@v3
+
     # Install python by github actions
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: 3.9
+
     # Update pip, install requirements and linter
     - name: Install dependencies
       run: |
